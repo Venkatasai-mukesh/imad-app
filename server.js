@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var articles = {
-  `article' :{
+  `article2' :{
       title:'Article1 |Venkatasai Mukesh',
       heading: 'Article1',
       date:'15 August 2017',
