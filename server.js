@@ -18,7 +18,7 @@ function createTemplate (data) {
     var heading = data.heading;
     var content = data.content;
     
-var htmlTemplate ='
+var htmlTemplate = `
       <html>
          <head>
             <title>
@@ -45,14 +45,15 @@ var htmlTemplate ='
     </div>
   </body>
 </html>
-';
+    `;
+    return htmlTemplate;
 }
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article2',function(req, res){
-     res.sendFile(path.join(__dirname,'ui','article2.html'));
+     res.send(createTemplate(article2.html));
 });
 app.get('/article3',function(req, res){
      res.sendFile(path.join(__dirname,'ui','article3.html'));
