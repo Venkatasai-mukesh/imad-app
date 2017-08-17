@@ -7,12 +7,12 @@ app.use(morgan('combined'));
 
 
 var articles = {
-  `article2` :{
-    title: 'Article1 |Venkatasai Mukesh',
-    heading: 'Article1',
-    date: '15 August 2017',
-    content:`<p>This is my first web page content This is my first web page content This is my first web page content This is my first web page content This is my first web page content This is my first web page content</p>`
-} ,
+  `article' :{
+      title:'Article1 |Venkatasai Mukesh',
+      heading: 'Article1',
+      date:'15 August 2017',
+      content: '<p> This is my first web page content This is my first web page content This is my first web page content This is my first web page content This is my first web page content This is my first web page content This is my first web page content </p>'
+  },
   `article3` :{  
     title: 'Article2 |Venkatasai Mukesh',
     heading: 'Article2',
