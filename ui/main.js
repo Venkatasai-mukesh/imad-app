@@ -52,7 +52,7 @@ var button = document.getElementById("counter");
         //request not done yet
     };
     //make request
-    request.open('GET' , 'http://mukeshguniganti98.imad.hasura-app.i0/submit-name?name=' + name ,true );
+    request.open('GET' , 'http://mukeshguniganti98.imad.hasura-app.io/submit-name?name=' + name ,true );
     request.send(null);
   };
       
