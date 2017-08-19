@@ -4,15 +4,14 @@ var button = document.getElementById("counter");
 
   button.onclick = function() {
 
-    //create a request object
-    var request = new XMLHttpRequest();
-    
+              //create a request object
+              var request = new XMLHttpRequest();
+            
 
 
     //capture the response and store it in a variable
     request.onreadystatechange = function () {
-        
-        if(request.readyState === XMLHttpRequest.DONE) {
+            if(request.readyState === XMLHttpRequest.DONE) {
              //Take some action
                 if(request.status === 200) {
                   var counter = request.responseText;
@@ -24,7 +23,7 @@ var button = document.getElementById("counter");
         //request not done yet
     };
     //make request
-    request.open('GET' , 'http://mukeshguniganti98.imad.hasura-app.io/counter' , true );
+    request.open('GET' , 'http://mukeshguniganti98.imad.hasura-app.io/counter' ,true );
     request.send(null);
     
     
@@ -32,7 +31,7 @@ var button = document.getElementById("counter");
   
   //submit name
   var nameInput = document.getElementById('name');
-  var name = nameinput.value;
+  var name = nameInput.value;
   var submit = document.getElementById('submit_btn');
   submit.onclick = function () {
   //make a request to the server and send the name
