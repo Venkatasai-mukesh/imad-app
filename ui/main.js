@@ -17,13 +17,11 @@ var button = document.getElementById("counter");
                   span.innerHTML = counter.toString();
              }
         }
-    
         //request not done yet
     };
     //make request
     request.open('GET' , 'http://mukeshguniganti98.imad.hasura-app.io/counter' ,true );
     request.send(null);
-    
   };
   
   //submit name
@@ -31,8 +29,9 @@ var button = document.getElementById("counter");
   var name = nameInput.value;
   var submit = document.getElementById('submit_btn');
   submit.onclick = function () {
-                   //create a request object
-              var request = new XMLHttpRequest();
+      
+           //create a request object
+          var request = new XMLHttpRequest();
             
     //capture the response and store it in a variable
     request.onreadystatechange = function () {
@@ -43,7 +42,7 @@ var button = document.getElementById("counter");
                    var names = request.responseText;
                    names = JSON.parse(names);
                    var list = '';
-                   for(var i=0; i< names.length; i++){
+                   for (var i=0; i< names.length; i++){
                        list += '<li>' + names[i] + '</li>';
                    }
                     var ul = document.getElementById('namelist');
@@ -53,7 +52,7 @@ var button = document.getElementById("counter");
         //request not done yet
     };
     //make request
-    request.open('GET' , 'http://mukeshguniganti98.imad.hasura-app.i0/submit-name?name='+name ,true );
+    request.open('GET' , 'http://mukeshguniganti98.imad.hasura-app.i0/submit-name?name=' + name ,true );
     request.send(null);
   };
       
