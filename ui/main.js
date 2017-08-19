@@ -24,7 +24,7 @@ var button = document.getElementById("counter");
         //request not done yet
     }
     //make request
-    request.open('GET' , 'https://mukeshguniganti98.imad.hasura-app.io' , true );
+    request.open('GET' , 'http://mukeshguniganti98.imad.hasura-app.io' , true );
     request.send(null);
     
     
