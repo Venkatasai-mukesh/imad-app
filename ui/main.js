@@ -25,8 +25,6 @@ var button = document.getElementById("counter");
   };
   
   //submit name
-  var nameInput = document.getElementById('name');
-  var name = nameInput.value;
   var submit = document.getElementById('submit_btn');
   submit.onclick = function () {
       
@@ -52,6 +50,8 @@ var button = document.getElementById("counter");
         //request not done yet
     };
     //make request
+     var nameInput = document.getElementById('name');
+     var name = nameInput.value;
     request.open('GET' , 'http://mukeshguniganti98.imad.hasura-app.io/submit-name?name=' + name ,true );
     request.send(null);
   };
