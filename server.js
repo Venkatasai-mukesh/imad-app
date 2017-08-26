@@ -106,8 +106,15 @@ app.get('/submit-name', function (req, res) { //URL :/submit-name?name=xxxx
 app.get('/:articleName',function(req, res){
 //articleName == article2
 //articles{articleName} =={} content object for article2
-var articleName =req.params.articleName;
-     res.send(createTemplate(articles[articleName]));
+
+ pool.query("SELECT * FROM articles WHERE title= 'article-one'" + req.params.articleName, function(err , result) {
+     
+     if(err) {
+         res.send()
+     }
+     
+ });
+     res.send(createTemplate(articleData));
 });
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
